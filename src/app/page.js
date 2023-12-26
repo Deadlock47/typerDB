@@ -1,11 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Document from 'next/document'
 import Link from 'next/link';
 import { getStories, insertStory } from './storydb/db';
-function page() {
+function Page() {
     const [texthin , setTexthin] = useState("");
-    const [stories , setStories] = useState();
+    const [stories , setStories] = useState([]);
     useEffect(()=>{
         async function getText()
         {
@@ -16,8 +15,7 @@ function page() {
             
         }
         getStories().then((response)=> setStories(response))
-        getText()
-        console.log(stories)
+        getText();
     },[])
   return (
     <div className='	 w-full h-full bg-gradient-to-t from-slate-800 via-gray-900 to-black'>
@@ -26,8 +24,8 @@ function page() {
                 <button className="dropbtn">Stories</button>
                 <div className="dropdown-content">
                     {
-                        stories?.map((item)=>
-                    <div className="item" >
+                        stories?.map((item,index)=>
+                    <div className="item" key={index} >
                         <div id="box">
                             <div className="title">{item.title}</div>
                             <div className="story" >{item.text.slice(0,137) + "...."}</div>
@@ -66,4 +64,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
