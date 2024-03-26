@@ -7,6 +7,7 @@ import { app } from './db';
 import { deleteDoc, doc, getFirestore } from 'firebase/firestore';
 export default function Item({data}){
     // console.log(typeof data.date)
+    console.log(data)
     return (
         <div className="bg-neutral-700 w-auto m-10 rounded-xl px-3 pb-4 pt-4 h-fit ">
             <div className="title flex flex-row justify-between p-2 px-3  ">
@@ -29,8 +30,8 @@ export default function Item({data}){
                 
                 <div onClick={async ()=>{
                     const db = getFirestore(app);
-                    await deleteDoc(doc(db, "stories" , data.title));
-                    location.reload();
+                    await deleteDoc(doc(db, "stories" , data.id));
+                    location.reload()
                 }}   className=' p-2 flex cursor-pointer bg-red-700 gap-3 text-xl rounded-lg mt-3   w-fit '>
                 <RiDeleteBin6Line></RiDeleteBin6Line>
                 <div className='text-base'>Delete</div>

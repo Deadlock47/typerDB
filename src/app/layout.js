@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +13,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
           <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC7ElEQVR4nO2YvWsUQRiHV4l6sVCv0kTEQggGMRAEtVKQFIJWZ9DCTtFCi/iBUVOIjVWMQTSCf4CWYhEbz1L8jIWF0YCIiLkTxEjkjGDURya8iy/L7t7u3c7eHt4PBnZnfjM7z+7O7Puu47TUkn0BOWAUKJO8SsAVc400QEaxr5E0QMopgHxKAyQVtUCiqp672/RPxGkWEMfCuEmM+f+CxNQLGWdzmCkLIA+BncDzgPZLMs6RrIOcE98moOJpmwM6pL2YdZA5oFu8+4A/qu2U1PdWGyQLIEavgRXqFfoN3AIWAW3AM5oExOgB0C59+gyAHA8TQVkCMRo3T0H1DV3gWQV5BPT45DLngW/AHWAHsNz6pP0UAWASOAAsFv8G4C6wX42xsH4aKoL1BtitANqBQeC78twHNmYi0yRY75SnG/gY4NuViUyTcO0Vj9lmbwd4VqaYaZZqAZnQC1dencdeU8QbkpicmCDTwFppPw4ck+M1wAe/gbMAUvJ4TTzVqz5881L6VDhSqRNkBjgq5X1SICPKZ0KPgtR3yQX1xbukrSDeWkFuqH4XkgLJCYx5MkNSlwemfMYxdXnxDNUBslX1W+/elLpAfMDaqoTkRTfO8vSLqlfiX2WKEyEFqBVkLMJ41+sAOSP+w8AhOT6YOEjY5OJ4AzSvEjETTRdV1PA1KyBDnqTLT+Pi7QR+SemUupsNBZEJLJHjPcBsyDz6xXdS1Z2Quu2NBkEWq7ub9QR8G74Ay8SjM8qnaqxJKyAxYafUd8ZEAE88c7im+uR1cf7VD9p6IheJpxkVAeQkr3e1JcL1OmRDSP6JAGdjwpgFPKD6DwAv1bn5T+bVWzeFBu5ZAakBxg9k4RxYF7KzbRNPvzWQGK+Z36v1E1gtdadD+l4Vz1LgszWQEMBqi/2H5DYTsnMFqaJ8s40CibL9JiLHIsiY+llX8Pk/3BwgMUOUpgAp24YAptMA0ZmmLQ2nAaIzzaRVAi67sVpLLTl29ReyA60k9uMiDwAAAABJRU5ErkJggg=="/>
-
       <body className={inter.className}>{children}</body>
     </html>
   )

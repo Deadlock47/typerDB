@@ -18,7 +18,7 @@ function Page() {
         getText();
     },[])
   return (
-    <div className='	 w-full h-full bg-gradient-to-t from-slate-800 via-gray-900 to-black'>
+    <div className='	 w-full h-full bg-[#191919]'>
         <div className="navbar  h-[calc(12%)] w-full flex  justify-between items-center p-4">
             <div className="dropdown rounded-lg">
                 <button className="dropbtn">Stories</button>
@@ -34,7 +34,7 @@ function Page() {
                     }
                 </div>
             </div>
-            <div className="title font-semibold  text-2xl ">Write Your tHOughTs</div>
+            <div className="title font-semibold kruti-texttt  text-2xl ">Write Your tHOughTs</div>
             <div className="history  text-center w-fit h-fit p-2 pl-6 pr-6  rounded-2xl bg-blue-900 "  ><Link href='/storydb' target='dd'>History</Link></div>
         </div>
         <div className="middle overflow-x-hidden flex justify-center items-center">
@@ -46,7 +46,7 @@ function Page() {
                         setTexthin(event.currentTarget.value)
                     }  
 
-                }} className='bg-transparent border-2 rounded-2xl p-4 text-' rows={24} cols={100} ></textarea>
+                }} className='bg-[#121111] rounded-2xl p-4 text-' rows={24} cols={100} ></textarea>
             </div>
         </div>
         <div className="footer overflow-x-hidden flex p-6  justify-center gap-10 ">
