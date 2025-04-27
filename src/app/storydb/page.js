@@ -27,7 +27,11 @@ export default function Home() {
   },[])
 
   return (
-    <div>
+    
+
+    
+    data ?
+   ( <div>
       <ToastContainer 
       position="top-right"
       autoClose={3000}
@@ -41,5 +45,11 @@ export default function Home() {
         data?.map((doc)=><Item key={doc.id} data = {doc} ></Item>)
       }
     </div>
+  ):(
+      <div className='flex justify-center items-center h-screen text-3xl font-bold text-white'>
+      Loading.....
+      </div>
+    )
+    
   )
 }
